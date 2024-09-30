@@ -2,7 +2,7 @@ import numpy as np
 import math  
 
 
-def series_function(x, d):
+def function1(x, d):
     sum_value = 0.0 
     k = 1  
     while True:
@@ -14,11 +14,11 @@ def series_function(x, d):
     return sum_value
 
 
-def tabulate_series(a, b, h, d):
+def function2(a, b, h, d):
     x_values = np.arange(a, b + h, h)  
     results = []  
     for x in x_values:
-        y = series_function(x, d)  
+        y = function1(x, d)  
         results.append((x, y))  
     return results
 
@@ -27,6 +27,6 @@ a = 3.0
 b = 4.0  
 h = 0.1  
 d = 0.001  
-table = tabulate_series(a, b, h, d)  
+table = function2(a, b, h, d)  
 for x, y in table:
     print(f"x = {x:.1f}, f(x) = {y}")  
