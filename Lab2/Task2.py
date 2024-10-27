@@ -2,7 +2,7 @@ import numpy as np
 import math  
 
 
-def series_function(x, d):
+def function(x, d):
     sum_value = 0.0 
     k = 1  
     while True:
@@ -18,7 +18,7 @@ def tabulate_series(a, b, h, d):
     x_values = np.arange(a, b + h, h)  
     results = []  
     for x in x_values:
-        y = series_function(x, d)  
+        y = function(x, d)  
         results.append((x, y))  
     return results
 
