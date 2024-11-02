@@ -66,6 +66,4 @@ def main():
         print(book)
 
 if __name__ == "__main__":
-    main()
-    
-    
+    main()   
